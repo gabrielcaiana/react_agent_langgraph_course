@@ -13,6 +13,7 @@
 # mais acoplado, já que eu precisaria fazer isso sempre que mudasse de modelo.
 # Pense nele como um atalho para criar um novo Chat Model.
 from langchain.chat_models import init_chat_model
+from rich import print
 
 ################################################################################
 
@@ -38,8 +39,7 @@ from langchain.chat_models import init_chat_model
 ################################################################################
 
 # Vou usar Ollama neste exemplo
-
-llm = init_chat_model("ollama:gpt-oss:20b")
+llm = init_chat_model("ollama:gpt-oss:latest")
 
 # A beleza do LangChain é que daqui para baixo, tudo é praticamente igual
 # para qualquer modelo.
