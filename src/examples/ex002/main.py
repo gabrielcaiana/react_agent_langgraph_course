@@ -1,7 +1,7 @@
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage, SystemMessage
 
-llm = init_chat_model("ollama:gpt-oss:20b")
+llm = init_chat_model("ollama:gpt-oss:latest")
 
 # Em vários momentos, queremos fazer o modelo se comportar de determinada forma.
 # Para isso, podemos usar um tipo especial de mensagem que não deve ser exibida
@@ -27,7 +27,7 @@ system_message = SystemMessage(
 # é uma mensagem do próprio modelo respondendo o usuário.
 # Isso forma um histórico de conversas bem estruturado para que o modelo tenha
 # contexto do assunto que está sendo tratado no momento.
-human_message = HumanMessage("Olá, meu nome é Luiz Otávio")
+human_message = HumanMessage("Olá, meu nome é Gabriel Caiana")
 
 # Você pode enviar uma lista de mensagens para o modelo com o histórico de
 # conversas. Se não fizer isso, cada mensagem será tratada como a primeira
